@@ -22,7 +22,7 @@ def reminder_checker(task, remind_time):
             break
         time.sleep(30)
 
-# Set reminder function
+# Reminder function
 def set_reminder():
     task = entry_task.get()
     hour = entry_hour.get()
@@ -58,7 +58,7 @@ tk.Label(root, text="📝 Task/Reminder:", font=("Arial", 10)).pack(pady=5)
 entry_task = tk.Entry(root, width=40, font=("Arial", 10))
 entry_task.pack(pady=5)
 
-# Time input (hour and minute in one row)
+# Time input 
 frame_time = tk.Frame(root)
 frame_time.pack(pady=10)
 
@@ -70,13 +70,12 @@ tk.Label(frame_time, text="Minute:", font=("Arial", 10)).grid(row=0, column=2, p
 entry_minute = tk.Entry(frame_time, width=5, font=("Arial", 10))
 entry_minute.grid(row=0, column=3)
 
-# AM/PM dropdown below
+# AM/PM dropdown 
 tk.Label(root, text="🕓 AM / PM:", font=("Arial", 10)).pack()
 combo_am_pm = ttk.Combobox(root, values=["AM", "PM"], width=10, font=("Arial", 10))
 combo_am_pm.set("AM")
 combo_am_pm.pack(pady=5)
 
-# Set button
 tk.Button(root, text="Set Reminder", command=set_reminder, bg="#4CAF50", fg="white", font=("Arial", 10)).pack(pady=20)
 
 root.mainloop()
